@@ -10,7 +10,6 @@ import time
 import os
 import capsnet_em as net
 import tensorflow.contrib.slim as slim
-from data.smallNORB import plot_imgs
 
 import logging
 import daiquiri
@@ -87,7 +86,9 @@ def main(args):
                     if __file.endswith(ckpt_re + ".index"):
                         ckpt = os.path.join(
                             cfg.logdir + '/{}/{}/'.format(model_name, dataset_name), __file[:-6])
-                # ckpt = os.path.join(cfg.logdir, "model.ckpt-%d" % (num_batches_per_epoch_train * epoch))
+                #ckpt = os.path.join(cfg.logdir, "model.ckpt-%d" % (num_batches_per_epoch_train * epoch))
+                ############Comentar linea de abajo
+                #ckpt = os.path.join(cfg.logdir, "caps/mnist/model-0.3764.ckpt-1718")
                 saver.restore(sess, ckpt)
 
                 accuracy_sum = 0

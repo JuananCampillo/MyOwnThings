@@ -10,7 +10,6 @@ import time
 import os
 import capsnet_dynamic_routing as net
 import tensorflow.contrib.slim as slim
-from data.smallNORB import plot_imgs
 
 import logging
 import daiquiri

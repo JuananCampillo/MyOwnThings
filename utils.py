@@ -4,7 +4,6 @@ import numpy as np
 import tensorflow as tf
 
 from config import cfg
-import data.smallNORB as norb
 from keras.datasets import cifar10, cifar100
 from keras import backend as K
 
