@@ -22,8 +22,6 @@ logger = daiquiri.getLogger(__name__)
 
 def main(args):
     """Get dataset hyperparameters."""
-    ##############comentar siguiente linea
-    args[1]=mnist
     assert len(args) == 2 and isinstance(args[1], str)
     dataset_name = args[1]
     logger.info('Using dataset: {}'.format(dataset_name))
